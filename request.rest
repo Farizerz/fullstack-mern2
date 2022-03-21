@@ -1,0 +1,26 @@
+###
+GET http://localhost:5000/barang
+
+###
+DELETE http://localhost:5000/barang/delete/17
+
+###
+POST http://localhost:5000/barang/create
+Content-Type: application/json
+
+{
+    "nama_barang": "Nintendo DS",
+    "harga": 350000
+}
+
+###
+PUT http://localhost:5000/barang/edit/2
+Content-Type: application/json
+
+{
+    "nama_barang": "Nintendo 3DS",
+    "harga": 950000
+}
+
+###
+DELETE http://localhost:5000/barang/delete/34
