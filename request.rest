@@ -14,12 +14,12 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5000/barang/edit/2
+PATCH http://localhost:5000/barang/edit/4
 Content-Type: application/json
 
 {
-    "nama_barang": "Nintendo 3DS",
-    "harga": 950000
+    "nama_barang": "Ikan Lele",
+    "harga": 1500
 }
 
 ###
