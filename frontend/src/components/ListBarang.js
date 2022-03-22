@@ -10,13 +10,13 @@ const ListBarang = () => {
     } ,[]);
 
     const selectBarang = async () => {
-        const response = await axios.get(`http://localhost:5000/barang/`);
+        const response = await axios.get(`http://${process.env.REACT_APP_HOST}:5000/barang/`);
         const jsonData = await response.data;
         setDataBarang(jsonData);
     }
 
     const deleteBarang = async (id) => {
-        await axios.delete(`http://localhost:5000/barang/delete/${id}`);
+        await axios.delete(`http://${process.env.REACT_APP_HOST}:5000/barang/delete/${id}`);
         selectBarang();
     }
 

@@ -9,7 +9,7 @@ const EditBarang = ({ data }) => {
     const simpanData = async e => {
         e.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/barang/edit/${data.id}`, {
+            await axios.patch(`http://${process.env.REACT_APP_HOST}:5000/barang/edit/${data.id}`, {
                 nama_barang: barang,
                 harga: harga
             });

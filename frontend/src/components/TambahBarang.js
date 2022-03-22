@@ -9,7 +9,7 @@ const TambahBarang = () => {
     const simpanData = async e => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/barang/create', {
+            await axios.post(`http://${process.env.REACT_APP_HOST}:5000/barang/create`, {
                 nama_barang: barang,
                 harga: harga
             });
